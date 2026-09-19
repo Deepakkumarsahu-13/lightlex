@@ -1,126 +1,202 @@
-        body {
-            background-color: #090a0f;
-            color: #f3f4f6;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
+/* =========================================
+   LIGHTLEX PORTFOLIO - MAIN STYLESHEET
+   ========================================= */
 
-        /* Glassmorphism primitives */
-        .glass-panel {
-            background: rgba(18, 22, 32, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-        }
+/* Base */
+html {
+    scroll-behavior: smooth;
+}
 
-        .glass-nav {
-            background: rgba(15, 18, 28, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
+body {
+    background-color: #090a0f;
+    color: #f3f4f6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
 
-        /* Glowing background shapes */
-        .glow-orb-1 {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
-            border-radius: 50%;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            pointer-events: none;
-            z-index: 0;
-        }
+/* =========================================
+   GLASSMORPHISM
+   ========================================= */
 
-        .glow-orb-2 {
-            position: absolute;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
-            border-radius: 50%;
-            top: 40%;
-            right: -100px;
-            pointer-events: none;
-            z-index: 0;
-        }
+.glass-panel {
+    background: rgba(18, 22, 32, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
 
-        /* Interactive card hover */
-        .interactive-card {
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+.glass-nav {
+    background: rgba(15, 18, 28, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-        .interactive-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(96, 165, 250, 0.4);
-            box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.25);
-        }
+/* =========================================
+   BACKGROUND GLOW
+   ========================================= */
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #090a0f;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e2433;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
-        }
+.glow-orb-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle,
+        rgba(59, 130, 246, 0.22) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    border-radius: 50%;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
 
-        /* Active Nav Link Marker */
-        .nav-link.active {
-            color: #60a5fa;
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(96, 165, 250, 0.3);
-        }
+.glow-orb-2 {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(
+        circle,
+        rgba(168, 85, 247, 0.18) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    border-radius: 50%;
+    top: 40%;
+    right: -100px;
+    pointer-events: none;
+    z-index: 0;
+}
 
-        .modal-overlay {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal-content {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
-        }
+/* =========================================
+   CARD HOVER
+   ========================================= */
 
+.interactive-card {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
+.interactive-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.25);
+}
 
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
-        /* ================================
-   Mobile & Tablet Optimization
-   ================================ */
+.nav-link.active {
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* =========================================
+   MODAL
+   ========================================= */
+
+.modal-overlay {
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.modal-content {
+    transition:
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.3s ease;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e2433;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
 
 @media (max-width: 1023px) {
 
-    /* Make grid sections use full width */
-    .md\:col-span-7,
-    .md\:col-span-5 {
-        grid-column: span 12 / span 12 !important;
-        width: 100% !important;
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    /* Prevent content from becoming too narrow */
-    .container {
-        width: 100% !important;
+    section {
+        width: 100%;
         max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        box-sizing: border-box;
+    }
+
+    .glass-panel {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Smaller glow on tablet */
+    .glow-orb-1 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .glow-orb-2 {
+        width: 350px;
+        height: 350px;
     }
 }
 
+/* =========================================
+   MOBILE
+   ========================================= */
 
-/* Small mobile screens */
-@media (max-width: 640px) {
+@media (max-width: 767px) {
 
-    /* Section spacing */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Sections */
     section {
+        width: 100%;
+        max-width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 16px !important;
         padding-right: 16px !important;
+        box-sizing: border-box;
+    }
+
+    /* Glass cards */
+    .glass-panel {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     /* Headings */
@@ -131,27 +207,171 @@
 
     h2 {
         font-size: 1.8rem !important;
+        line-height: 1.2 !important;
     }
 
-    /* Hero buttons */
-    section a {
-        max-width: 100%;
+    h3 {
+        line-height: 1.3;
     }
 
-    /* Glass cards */
-    .glass-panel {
-        width: 100% !important;
-        max-width: 100% !important;
+    /* Navigation */
+    header {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
     }
 
-    /* Contact form */
-    #contact-form {
+    .glass-nav {
         width: 100%;
     }
 
-    /* Reduce large vertical gaps */
-    .py-32 {
-        padding-top: 5rem !important;
-        padding-bottom: 5rem !important;
+    /* Hero */
+    #home {
+        min-height: auto !important;
+        padding-top: 130px !important;
+        padding-bottom: 80px !important;
+    }
+
+    #home p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Hero buttons */
+    #home a {
+        width: 100%;
+    }
+
+    /* Skills */
+    #about {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    #about .glass-panel {
+        padding: 20px !important;
+    }
+
+    /* Experience */
+    #experience {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    /* Education */
+    #education {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    /* Projects */
+    #projects {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    /* Project preview */
+    #projects .h-48 {
+        height: 180px;
+    }
+
+    /* Contact */
+    #contact {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    #contact .glass-panel {
+        padding: 20px !important;
+    }
+
+    /* Modal */
+    .modal-overlay {
+        padding: 10px !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: 92vh !important;
+        border-radius: 20px !important;
+    }
+
+    /* Modal header */
+    .modal-content > div:first-child {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Modal tabs */
+    .modal-content .flex.gap-3 {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Certificate image */
+    #tab-content-certificate img {
+        width: 100%;
+        height: auto;
+        max-height: 65vh;
+        object-fit: contain;
+    }
+
+    /* Footer */
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Smaller glow */
+    .glow-orb-1 {
+        width: 330px;
+        height: 330px;
+        top: -50px;
+    }
+
+    .glow-orb-2 {
+        width: 280px;
+        height: 280px;
+        right: -120px;
+    }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    #home {
+        padding-top: 120px !important;
+    }
+
+    .glass-panel {
+        border-radius: 20px !important;
+    }
+
+    #about .glass-panel,
+    #contact .glass-panel {
+        padding: 16px !important;
+    }
+}
+
+/* =========================================
+   REDUCE HOVER MOVEMENT ON TOUCH DEVICES
+   ========================================= */
+
+@media (hover: none) {
+
+    .interactive-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
